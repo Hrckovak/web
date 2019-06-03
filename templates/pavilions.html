@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>Zoznam pavilonov</h1>
-        <p>Zatial prazdny</p>
-        {% for x in pavilions%}
-        <p>{{x}}</p>
-        {% endfor %}
-        <a href="/">Home</a>
-    </body>
-</html>
+{% extends "template.html" %}
+
+{% block content %}
+<H1 class="alert alert-success"><i class="glyphicon glyphicon-tree-conifer"></i> Zoznam Pavilonov</H1>
+<hr>
+{% for pavilion in pavilions %}
+<p>{{ pavilion }}</p>
+{% endfor %}
+{% endblock %}
